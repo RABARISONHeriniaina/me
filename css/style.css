@@ -1,0 +1,446 @@
+@font-face{
+	font-family: Poppins;
+	src: url('../font/Poppins/Poppins-Regular.ttf');
+}
+@font-face{
+	font-family: 'Architects Daughter';
+	src: url('../font/Architects_Daughter/ArchitectsDaughter-Regular.ttf');
+}
+html
+{
+	scroll-behavior: smooth;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins;
+	color: #fff;
+}
+body
+{
+	/*background: url('../image/omid-armin-AFVJ46r0jP4-unsplash.jpg') no-repeat;*/
+	background: url('../image/cyberfraude-risque-informatique.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.bloc
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(transparent,rgba(0,0,0,1));
+
+}
+.top
+{
+	transition: 1s;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	bottom: 800px;
+	right: 20px;
+	cursor: pointer;
+	padding: 5px;
+	font-size: .8em;
+	z-index: 10000;
+	border-radius: 50px;
+	background: #ff0036;
+}
+.top.active
+{
+	bottom: 20px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 11111111;
+}
+header
+{
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 10;
+	transition: 1s;
+	/*border-bottom: 1px solid #777;  a deommenter si ilaina*/
+}
+header.active
+{
+	background: #111;
+	height: 7vh;
+	box-shadow: 0 0 2px #fff,0 0 11px #fff,0 0 20px #fff;
+}
+header.active .header h1
+{
+	letter-spacing: 3px;
+	color: #ff0036;
+}
+header.active .header nav ul li:hover
+{
+	color: white;
+}
+header.active .header nav ul li
+{
+	color: #999;
+}
+header.active .header nav ul li a
+{
+	text-decoration: none;
+}
+header .header nav ul li a
+{
+	text-decoration: none;
+}
+
+.header
+{
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.header h1
+{
+	letter-spacing: 3px;
+	color: #fff;
+	font-family: 'Architects Daughter';
+	font-size: 2.3em;
+}
+.header nav
+{
+	position: relative;
+	width: 40%;
+}
+.header nav ul
+{
+	display: flex;
+	list-style: none;
+	width: 100%;
+	justify-content: space-between;
+	position: relative;
+}
+.header nav ul li:hover
+{
+	color: #ff0036;
+	opacity: 1;
+	transform: scale(1.1);
+}
+.header nav ul li
+{
+	cursor: pointer;
+	opacity: .5;
+	transition: .4s;
+
+}
+.section1
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('../image/egor-myznik-p-psrGjwG1w-unsplash.jpg') no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+.section1 .section_container
+{
+	width: 60%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+.section1 .section_container h1
+{
+	font-size: 3em;
+}
+.section1 .section_container h1 span
+{
+	color: #ff0036;
+	font-size: 1.3em;
+}
+.section1 .section_container a
+{
+	display: inline-block;
+	letter-spacing: 2px;
+	cursor: pointer;
+	padding: 10px 20px;
+	background: #ff0036;
+	border-radius: 4px;
+	text-decoration: none;
+	margin-top: 50px;
+	transition: .5s;
+}
+.section1 .section_container a:hover
+{
+	transform: scale(1.1);
+}
+.section2
+{
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+	height: 130vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	/*background: #222;*/
+	/*background: rgba(2,2,2,0.8);*/
+	padding-top: 30px;
+	z-index: 4;
+}
+.section2 .h1
+{
+	width: 100%;
+	height: 50vh;
+	text-align: center;
+	background: #000;
+	position: relative;
+	top: -30px;
+	left: 0;
+	margin-bottom: 0px;
+	transition: 1.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+.section2 .h1.active
+{
+	opacity: 1;
+	visibility: visible;
+}
+.section2 .h1 h1
+{
+	font-size: 3em;
+}
+.section2 .h1 span
+{
+	color: #ff0036;
+	text-transform: uppercase;
+}
+.section2 .h1 p
+{
+	width: 60%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.section2 .cour:hover
+{
+	box-shadow: 0 0 3px #ff0036,0 0 10px #ff0036,0 0 30px #ff0036;
+	transform: translateY(-10px);
+}
+.section2 .cour:hover p
+{
+	color: #ff0036;
+	transform: scale(1.2);
+}
+.section2 .cour:hover img
+{
+	filter: grayscale(1);
+}
+.section2 .cour
+{
+	width: 25%;
+	height: 45%;
+	background: #2e2e2e;
+	margin-bottom: 80px;
+	position: relative;
+	top: -150px;
+	margin-right: .5px;
+	overflow: hidden;
+	/*border-radius: 5px;*/
+	cursor: pointer;
+	transition: .4s;
+}
+.section2 .cour img
+{
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	filter: grayscale/*(*/1);
+	transition: .5s;
+}
+.section2 .cour p
+{
+	position: absolute;
+	bottom: 10px;
+	text-transform: uppercase;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: 1s;
+}
+.section2 .cour.c1,.section2 .cour.c4
+{
+	position: relative;
+	left: 50px;
+}
+.section2 .cour.c3,.section2 .cour.c6
+{
+	position: relative;
+	right: 50px;
+}
+
+.section2 .cour.c4,.section2 .cour.c5,.section2 .cour.c6
+{
+	position: relative;
+	top: -180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section3
+{
+	background: #000;
+	position: absolute;
+	top: 230vh;
+	width: 100%;
+	padding-top: 270px;
+}
+.section3 .bloc_section3
+{
+	width: 85%;
+	margin: auto;
+}
+.section3 .bloc_section3 h1
+{
+	font-size: 2.5em;
+	color: #fff;
+	margin-bottom: 50px;
+}
+.section3 .bloc_section3 h1 span
+{
+	color: #ff0036;
+	font-size: 1.4em;
+}
+.section3 .bloc_section3 form
+{
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.section3 .bloc_section3 form label
+{
+	width: 49%;
+	display: flex;
+	flex-direction: column;
+}
+.section3 .bloc_section3 form label input
+{
+	width: 100%;
+	height: 50px;
+	border: none;
+	background: transparent;
+	font-size: 1.2em;
+	border-bottom: 2px solid #ff0036;
+	margin-bottom: 20px;
+}
+.section3 .bloc_section3 form label span
+{
+	position: relative;
+	top: -55px;
+	font-size: 1.2em;
+	transition: .4s;
+}
+.section3 .bloc_section3 form label input:focus ~ span,
+.section3 .bloc_section3 form label input:valid ~ span
+{
+	transform: scale(0.8) translateX(-70px);
+	top: -100px;
+}
+.section3 .bloc_section3 form label input:valid ~ span
+{
+	color: #555;
+}
+.section3 .bloc_section3 form .textarea
+{
+	width: 100%;
+	height: 150px;
+}
+.section3 .bloc_section3 form .textarea textarea
+{
+	width: 100%;
+	height: 100%;
+	resize: none;
+	background: transparent;;
+	border: none;
+	border-bottom: 2px solid #ff0036;
+}
+.section3 .bloc_section3 form .textarea span
+{
+	position: relative;
+	/*top: -30px;*/
+	transition: .4s;
+
+}
+.section3 .bloc_section3 form .textarea textarea:focus ~ span,
+.section3 .bloc_section3 form label textarea:valid ~ span
+{
+	transform: scale(0.8) translate(-150px,-130px);
+}
+.section3 .bloc_section3 form label textarea:valid ~ span
+{
+	color: #555;
+}
+.section3 .bloc_section3 form input[type="submit"]
+{
+	background: #ff0036;
+	color: #fff;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	padding: 10px 50px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 500;
+	cursor: pointer;
+
+}
+.section3 footer
+{
+	margin-top: 30px;
+	background: white;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.section3 footer p
+{
+	color: #000;
+}
